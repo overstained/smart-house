@@ -18,16 +18,37 @@
 ```
 mvn install
 ```
+
 <p>or</p>
+
 ```
 mvn install -Dmaven.test.skip=true
 ```
+
 <p>if you want to skip test execution phase.</p>
 
 ## Running the project
 
-In the root folder of the project, execute:
+<p>In the root folder of the project, execute:</p>
 
 ```
 docker-compose up
 ```
+
+<p>This will build and start the services: springboot and springboot-mongo which will run each a single container:</p>
+* springboot exposes port 8081 for the web application
+* springboot-mongo exposes port 27018 for MongoDB
+
+# Technologies used
+
+This project exposes a rest API built using Spring Boot 2 and documented using Swagger 2 (after starting the server you can access at
+http://localhost:8081/swagger-ui.html the swagger interface which can also be used for hitting the endpoints).
+For the data access layer, I employ the ODM Spring Data Mongo and for the data persistence, MongoDB 3.8.
+To improve clarity especially at the domain models and rest models level, I'm using Lombok.
+
+# Structure of the project
+
+I've applied a commonly used layered architecture in Spring - the Controller/Service/Repository stack.
+
+
+
