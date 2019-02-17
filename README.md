@@ -41,14 +41,32 @@ docker-compose up
 
 # Technologies used
 
-This project exposes a rest API built using Spring Boot 2 and documented using Swagger 2 (after starting the server you can access at
-http://localhost:8081/swagger-ui.html the swagger interface which can also be used for hitting the endpoints).
-For the data access layer, I employ the ODM Spring Data Mongo and for the data persistence, MongoDB 3.8.
-To improve clarity especially at the domain models and rest models level, I'm using Lombok.
+<p>This project exposes a rest API built using Spring Boot 2 and documented using Springfox Swagger 2 (after starting the server you can access at
+http://localhost:8081/swagger-ui.html the swagger interface which can also be used for hitting the endpoints).</p>
+<p>For the data access layer, I employ the ODM Spring Data Mongo and for the data persistence, MongoDB 3.8.
+To improve clarity especially at the domain models and rest models level, I'm using Lombok.</p>
 
 # Structure of the project
 
-I've applied a commonly used layered architecture in Spring - the Controller/Service/Repository stack.
+<p>I've applied a commonly used layered architecture in Spring - the Controller/Service/Repository stack.</p>
+<p>I have sepparated the integration tests from the unit tests: unit tests are located in src/test, integration tests are located in src/it.</p>
+
+# Problems encountered during development
+
+<p>Apparently javax.validation @Size(min,max) used for validating array length does not take into account the min size.
+When I use double annotation @Size(min) @Size(max) it works as expected but in case of error, the field error messages will contain
+[max, Integer.maxValue] or [0, max] values.
+In order to overcome this, I've implemented a custom validator with custom defined messages. An improvement there would be
+to centralize the messages in a properties file - or a resource bundle for i18n.</p>
+
+<p>Integration tests - I chose to use OffsetDateTime to represent database dates as they always represent the same instances in time
+and have stable ordering. I had to defined custom converters for OffsetDateTime-Date and Date-OffsetDateTime. For the main application they worked. For the testing environment, I used an embedded MongoDB with embededmongo-spring which provides a factory bean for the embedded mongo. I could not get the MongoTemplate to register the converters properly. The configuration can be found at src/it/java../smarthousemanager/TestConfig.java.</p>
+
+<p>Swagger - swagger builds its json objects from the models using reflection. I have not found any way of customizing this. I was not
+happy with 
+
+
+
 
 
 
