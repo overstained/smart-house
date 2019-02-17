@@ -43,7 +43,7 @@ docker-compose up
 # Technologies used
 
 <p>This project exposes a rest API built using Spring Boot 2 and documented using Springfox Swagger 2 (after starting the server you can access at
-http://localhost:8081/swagger-ui.html the swagger interface which can also be used for hitting the endpoints).</p>
+  <a href=http://localhost:8081/swagger-ui.html>Local Swagger UI</a> the swagger interface which can also be used for hitting the endpoints).</p>
 <p>For the data access layer, I employ the ODM Spring Data Mongo and for the data persistence, MongoDB 3.8.
 To improve clarity especially at the domain models and rest models level, I'm using Lombok.</p>
 I wrote the unit and integration tests in a BDD fation using BDDMockito with JUnit. For integration tests, I used an embedded MongoDB.
