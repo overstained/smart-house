@@ -1,6 +1,7 @@
 # Smart House Device Manager
 
 <p>This system exposes a rest API to a cleaning device - can be extended to multiple devices. Given instructions interpretable by the device and an environment in which it runs and understands, the result of the tasks ran will be centralized in a database and exposed to the caller. This API also exposes an endpoint, giving access to the historical task execution of the device</p>
+<p>The cleaning robot reads its unique DEVICE_ID from system environment. In a real-world scenario it would have it stored in read-only memory</p>
 
 # Requirements to build and run
 ## Install Maven
