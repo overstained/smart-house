@@ -97,9 +97,9 @@ happy with how swagger generated the payload example for the post request:</p>
   
 # Smart house management concept
 
-This project could pivot in multiple directions: from autonomous garbage trucks to drone-based delivery of goods. I have chosen to go with a centralized, per-house task manager for smart homes. Many devices need to perform tasks like - dish washing ( when the dish washer is full enough it starts the cleaning program, washing machines ( takes laundry out of the basket, following a schedule or when the basket exceeds a threshold and runs some program), electrical current regulator, temperature regulator and so on.
-The manager should aggregate sensorial information, take into account a predefined schedule and control the execution of each task.
-It should also persist sesor data, completion times, energy consumption and so on. This data could be used in conjunction with a machine learning algorithm or with simple data analysis with the goal to improve on limiting consumption of electricity/water, alert the owners when the budget of the utilities is exceeded, alert the authorities in case of fire and other neighboring houses. The posibilities are endless.
+<p>This project could pivot in multiple directions: from autonomous garbage trucks to drone-based delivery of goods. I have chosen to go with a centralized, per-house task manager for smart homes. Many devices need to perform tasks like - dish washing ( when the dish washer is full enough it starts the cleaning program, washing machines ( takes laundry out of the basket, following a schedule or when the basket exceeds a threshold and runs some program), electrical current regulator, temperature regulator and so on.</p>
+<p>The manager should aggregate sensorial information, take into account a predefined schedule and control the execution of each task.</p>
+<p>It should also persist sesor data, completion times, energy consumption and so on. This data could be used in conjunction with a machine learning algorithm or with simple data analysis with the goal to improve on limiting consumption of electricity/water, alert the owners when the budget of the utilities is exceeded, alert the authorities in case of fire and other neighboring houses. The posibilities are endless.</p>
 
 
 
