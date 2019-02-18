@@ -40,6 +40,7 @@ docker-compose up
 <ul>
   <li>springboot exposes port 8081 for the web application</li>
   <li>springboot-mongo exposes port 27018 for MongoDB</li>
+</ul>
 
 # Technologies used
 
